@@ -18,8 +18,7 @@ ui-root {
 }
 
 @mixin is-active($selector) {
-	#{$selector}[ui-active],
-	#{$selector}:not([ui-active="false"]) {
+	#{$selector}[ui-active]:not([ui-active="false"]) {
 		@content
 	}
 };
