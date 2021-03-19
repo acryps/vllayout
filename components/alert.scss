@@ -1,0 +1,13 @@
+$alert-padding: 1rem !default;
+$alert-background: var(--state-background, $page-dim-background) !default;
+$alert-color: var(--state-color, $page-dim-color) !default;
+$alert-border: $border-width solid var(--state-border, $page-color) !default;
+
+ui-alert {
+	display: block;
+	padding: $alert-padding;
+	margin-bottom: 1em;
+	border: $alert-border;
+	background: $alert-background;
+	color: $alert-color;
+}

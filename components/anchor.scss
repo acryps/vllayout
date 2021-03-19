@@ -1,0 +1,10 @@
+$anchor-offset: 1rem !default;
+
+ui-anchor::before { 
+	display: block; 
+	content: " "; 
+	margin-top: -$nav-height - $anchor-offset;
+	height: $nav-height + $anchor-offset;
+	visibility: hidden; 
+	pointer-events: none;
+}

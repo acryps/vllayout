@@ -1,0 +1,50 @@
+$button-padding: 0.5em 1em !default;
+$button-background: var(--state-background, $page-accent-background) !default;
+$button-color: var(--state-color, $page-accent-color) !default;
+$button-active-background: var(--state-background-active, $page-accent-active-background) !default;
+$button-active-color: var(--state-color-active, $page-accent-active-color) !default;
+$button-active-size: 2px !default;
+$button-border: $border-width solid var(--state-border, $page-accent-background) !default;
+
+ui-buttons {
+	display: block;
+	margin-bottom: 1em;
+}
+
+ui-buttons ui-button {
+	margin-right: 1em;
+}
+
+ui-buttons ui-button:last-child {
+	margin-right: 0;
+}
+
+ui-button {
+	display: inline-block;
+	padding: $button-padding;
+	background: $button-background;
+	color: $button-color;
+	border: $button-border;
+	cursor: pointer;
+	user-select: none;
+
+	transition: 0.2s background, 0.2s color, 0.2s box-shadow;
+}
+
+ui-button[ui-button-block] {
+	display: block;
+}
+
+ui-button:hover {
+	background: $button-active-background;
+	color: $button-active-color;
+	border-color: $button-active-background;
+	box-shadow: 0 0 0 $button-active-size $button-active-background;
+}
+
+ui-title ui-buttons,
+ui-title > ui-button {
+	float: right;
+	font-size: 1rem;
+	margin-left: 1rem;
+}

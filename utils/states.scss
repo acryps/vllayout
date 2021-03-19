@@ -1,0 +1,80 @@
+@use "sass:map";
+
+$colors: (
+	'success': (
+		'color': #082,
+		'color-active': #060,
+		'inverse': #fff,
+		'inverse-active': #fff
+	),
+	'primary': (
+		'color': $page-accent-background,
+		'color-active': $page-accent-active-background,
+		'inverse': $page-accent-color,
+		'inverse-active': $page-accent-active-color
+	),
+	'inverse': (
+		'color': $page-accent-active-background,
+		'color-active': $page-accent-background,
+		'inverse': $page-accent-active-color,
+		'inverse-active': $page-accent-color
+	),
+	'info': (
+		'color': #ccc,
+		'color-active': #aaa,
+		'inverse': #000,
+		'inverse-active': #000
+	),
+	'danger': (
+		'color': #c42,
+		'color-active': #f20,
+		'inverse': #fff,
+		'inverse-active': #fff
+	),
+	'warn': (
+		'color': #fc2,
+		'color-active': #da0,
+		'inverse': #000,
+		'inverse-active': #000
+	),
+	'dark': (
+		'color': #222,
+		'color-active': #000,
+		'inverse': #fff,
+		'inverse-active': #fff
+	),
+	'light': (
+		'color': #eee,
+		'color-active': #ccc,
+		'inverse': #000,
+		'inverse-active': #000
+	),
+) !default;
+
+@each $name, $values in $colors {
+	[ui-#{$name}],
+	[ui-state="#{$name}"] {
+		--state-color: #{map.get($values, 'inverse')};
+		--state-background: #{map.get($values, 'color')};
+		--state-border: #{map.get($values, 'color')};
+
+		--state-color-active: #{map.get($values, 'inverse-active')};
+		--state-background-active: #{map.get($values, 'color-active')};
+		--state-border-active: #{map.get($values, 'color-active')};
+	}
+
+	[ui-#{$name}-outline],
+	[ui-state="#{$name}-outline"] {
+		--state-color: #{map.get($values, 'color')};
+		--state-background: #{map.get($values, 'inverse')};
+		--state-border: #{map.get($values, 'color')};
+
+		--state-color-active: #{map.get($values, 'inverse-active')};
+		--state-background-active: #{map.get($values, 'color-active')};
+		--state-border-active: #{map.get($values, 'color-active')};
+	}
+
+	[ui-text-#{$name}] {
+		color: #{map.get($values, 'color')};
+	}
+}

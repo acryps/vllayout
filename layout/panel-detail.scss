@@ -1,0 +1,38 @@
+$pannel-margin: 1em !default;
+$pannel-padding: 1em !default;
+$pannel-width: 15em !default;
+$pannel-border: $border !default;
+
+[ui-panel-detail] {
+	display: flex;
+	height: 100%;
+	overflow: hidden;
+
+	> ui-nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	ui-panel {
+		width: $pannel-width;
+		flex-shrink: 0;
+		margin: $pannel-margin;
+		padding: $pannel-padding;
+		border: $pannel-border;
+
+		+ ui-panel {
+			margin-left: 0;
+		}
+	}
+	
+	ui-detail {
+		flex-grow: 1;
+	}
+}
+
+ui-root[ui-panel-detail] {
+	height: calc(100vh - #{$nav-padding-y * 2 + 1rem * $line-height});
+	padding-top: #{$nav-padding-y * 2 + 1rem * $line-height};
+}

@@ -1,0 +1,46 @@
+$list-padding: 0.75em 1em !default;
+$list-active-background: $page-accent-background !default;
+$list-active-color: $page-accent-color !default;
+$list-hover-background: $page-hover-background !default;
+$list-border: $border !default;
+$list-tagline-size: 0.8em !default;
+
+ui-list {
+	display: block;
+	border: $list-border;
+}
+
+ui-list-item {
+	display: block;
+	border-bottom: $list-border;
+	padding: $list-padding;
+}
+
+ui-list-item-title {
+	display: block;
+	font-weight: bold;
+}
+
+ui-list-item-tagline {
+	display: block;
+	font-size: $list-tagline-size;
+}
+
+ui-list-item-tagline ui-badge {
+	float: right;
+	top: 0.3em;
+}
+
+ui-list-item[ui-active] {
+	background: $list-active-background;
+	color: $list-active-color;
+}
+
+ui-list-item[ui-action]:hover:not([ui-active]) {
+	cursor: pointer;
+	background: $list-hover-background;
+}
+
+ui-list-item:last-child {
+	border-bottom: none;
+}

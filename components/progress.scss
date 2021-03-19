@@ -1,0 +1,39 @@
+$progress-background: $page-dim-background !default; 
+$progress-color: $page-accent-background !default;
+$progress-border: $border !default;
+$progress-border-width: $border-width !default;
+
+ui-progress {
+	display: block;
+	position: relative;
+	padding-top: 1em;
+
+	&:not(:empty) {
+		margin-bottom: 1rem;
+		padding-top: 1.5em;
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 1em;
+		background: $progress-background;
+		border: $progress-border;
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: $progress-border-width;
+		left: $progress-border-width;
+		right: calc(100% - var(--value) * 100%);
+		transition: 0.2s right;
+		height: 1em;
+		background: $progress-color;
+	}
+}

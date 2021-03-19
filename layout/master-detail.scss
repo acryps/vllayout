@@ -1,0 +1,35 @@
+$master-width: 20rem !default;
+$master-border: $border !default;
+
+[ui-master-detail] {
+	display: grid;
+	grid-template-areas: 'master detail';
+	grid-template-columns: $master-width calc(100% - #{$master-width});
+	height: 100%;
+
+	> ui-master {
+		grid-area: master;
+		border-right: $master-border;
+		overflow-y: auto;
+	
+		> ui-list {
+			border: none;
+		}
+	}
+
+	> ui-detail {
+		grid-area: detail;
+		overflow-y: auto;
+	}
+}
+
+// include navbar if master-detail is applied to root
+ui-root[ui-master-detail] {
+	grid-template-areas: 'header header' 'master detail';
+	grid-template-rows: $nav-height calc(100% - #{$nav-height});
+	height: 100vh;
+
+	> ui-nav {
+		grid-area: header;
+	}
+}

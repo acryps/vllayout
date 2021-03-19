@@ -1,0 +1,32 @@
+$page-breakpoints: (
+	xs: 0,
+	sm: 550px,
+	md: 750px,
+	lg: 950px,
+	xl: 1200px,
+	xxl: 1400px
+) !default;
+
+@mixin is-touch {
+	@media (hover: none) {
+		@content
+	}
+};
+
+@mixin is-pointer {
+	@media (hover: hover) {
+		@content
+	}
+};
+
+@mixin is-smaller($breakpoint) {
+	@media (max-width: map-get($page-breakpoints, $breakpoint) - 1px) {
+		@content
+	}
+};
+
+@mixin is-bigger($breakpoint) {
+	@media (min-width: map-get($page-breakpoints, $breakpoint)) {
+		@content
+	}
+};

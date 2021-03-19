@@ -1,0 +1,40 @@
+$breadcrumb-hover-background: $page-hover-background !default;
+$breadcrumb-bracket-size: $border-width !default;
+$breadcrumb-bracket-color: $page-color !default;
+
+ui-breadcrumbs {
+	display: block;
+	margin: 0 -0.5em;
+
+	ui-breadcrumb {
+		position: relative;
+		display: inline-block;
+		padding: 0.25em 0.5em;
+		margin-right: 1em;
+
+		&:last-child {
+			font-weight: bold;
+		}
+
+		&:not(:last-child) {
+			&:after {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				top: 0.75em;
+				left: 100%;
+				margin-left: 0.2em;
+				transform: rotate(45deg);
+				width: 0.5em;
+				height: 0.5em;
+				border-right: $breadcrumb-bracket-size solid $breadcrumb-bracket-color;
+				border-top: $breadcrumb-bracket-size solid $breadcrumb-bracket-color;
+			}
+
+			&:hover {
+				cursor: pointer;
+				background: $breadcrumb-hover-background;
+			}
+		}
+	}
+}

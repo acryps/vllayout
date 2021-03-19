@@ -1,0 +1,9 @@
+$content-width: 1200px !default;
+$content-padding: 1rem !default;
+
+ui-content {
+	display: block;
+	padding: $content-padding;
+	max-width: $content-width;
+	margin: 0 auto;
+}

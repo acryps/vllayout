@@ -1,0 +1,18 @@
+$off-bounds: -1000vmax !default;
+
+html {
+	scroll-behavior: smooth;
+	text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	color: $page-color;
+	background: $page-background;
+}
+
+ui-root {
+	display: block;
+}

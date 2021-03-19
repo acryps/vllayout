@@ -1,0 +1,21 @@
+$title-size: 2em !default;
+$subtitle-size: 1.5em !default;
+
+ui-title {
+	display: block;
+	font-size: $title-size;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+ui-subtitle {
+	display: block;
+	font-size: $subtitle-size;
+	font-weight: bold;
+	margin-bottom: 0.8rem;
+}
+
+ui-section {
+	display: block;
+	margin-bottom: 1rem;
+}

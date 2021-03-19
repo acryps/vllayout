@@ -1,0 +1,25 @@
+$code-background: $page-dim-background !default;
+$code-color: $page-dim-color !default;
+$code-font: $font-mono !default;
+
+ui-code,
+ui-code-block {
+	padding: 0.25em;
+	background: $code-background;
+	color: $code-color;
+	font-family: $code-font;
+	white-space: pre-wrap;
+}
+
+ui-code-block {
+	display: block;
+	padding: 0.75em;
+	tab-size: 4;
+	margin-bottom: 1em;
+	overflow-y: auto;
+	white-space: pre;
+}
+
+ui-id {
+	font-family: $code-font;
+}

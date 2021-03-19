@@ -1,0 +1,24 @@
+$font-size: 16px !default;
+$line-height: 1.6 !default;
+
+$font-sans-serif: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji !default;
+$font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+body {
+	font-family: $font-sans-serif;
+	font-size: $font-size;
+
+	line-height: $line-height;
+}
+
+[ui-font="mono"],
+[ui-font-mono] {
+	font-family: $font-mono;
+}
+
+[ui-font="sans-serif"],
+[ui-font-sans-serif],
+[ui-font="normal"],
+[ui-font-normal] {
+	font-family: $font-sans-serif;
+}

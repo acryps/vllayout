@@ -1,0 +1,14 @@
+$badge-background: var(--state-background, $page-background) !default;
+$badge-color: var(--state-color, $page-color) !default;
+$badge-border: $border-width solid var(--state-border, $page-color) !default;
+
+ui-badge {
+	display: inline-block;
+	border: $badge-border;
+	font-size: 0.7em;
+	padding: calc(0.15em - #{$border-width}) 0.5em;
+	position: relative;
+	top: -0.1em;
+	background: $badge-background;
+	color: $badge-color;
+}
