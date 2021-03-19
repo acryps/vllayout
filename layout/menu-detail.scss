@@ -30,7 +30,7 @@ $menu-border: $border !default;
 				background: $menu-hover-background;
 			}
 
-			&[ui-active] {
+			@include is-active(&) {
 				background: $menu-active-background;
 				color: $menu-active-color;
 			}

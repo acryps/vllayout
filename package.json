@@ -2,5 +2,9 @@
 	"name": "vllayout",
 	"version": "1.0.0",
 	"author": "vlvt.in",
-	"license": "GPL-3.0-only"
+	"license": "GPL-3.0-only",
+	"scripts": {
+		"preversion": "git pull",
+		"postversion": "git push"
+	}
 }

@@ -16,3 +16,10 @@ body {
 ui-root {
 	display: block;
 }
+
+@mixin is-active($selector) {
+	#{$selector}[ui-active],
+	#{$selector}:not([ui-active="false"]) {
+		@content
+	}
+};

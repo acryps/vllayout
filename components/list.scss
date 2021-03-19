@@ -31,7 +31,7 @@ ui-list-item-tagline ui-badge {
 	top: 0.3em;
 }
 
-ui-list-item[ui-active] {
+@include is-active(ui-list-item) {
 	background: $list-active-background;
 	color: $list-active-color;
 }
