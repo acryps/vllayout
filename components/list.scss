@@ -14,6 +14,11 @@ ui-list-item {
 	display: block;
 	border-bottom: $list-border;
 	padding: $list-padding;
+
+	@include is-active {
+		background: $list-active-background;
+		color: $list-active-color;
+	}
 }
 
 ui-list-item-title {
@@ -29,11 +34,6 @@ ui-list-item-tagline {
 ui-list-item-tagline ui-badge {
 	float: right;
 	top: 0.3em;
-}
-
-@include is-active(ui-list-item) {
-	background: $list-active-background;
-	color: $list-active-color;
 }
 
 ui-list-item[ui-action]:hover:not([ui-active]) {
