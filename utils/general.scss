@@ -17,6 +17,10 @@ ui-root {
 	display: block;
 }
 
+ui-block {
+	display: block;
+}
+
 @mixin is-active {
 	&[ui-active]:not([ui-active="false"]) {
 		@content
