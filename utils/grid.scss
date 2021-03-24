@@ -1,5 +1,6 @@
 ui-row {
 	display: flex;
+	flex-wrap: wrap;
 
 	&[ui-row-horizontal] {
 		flex-direction: row;
