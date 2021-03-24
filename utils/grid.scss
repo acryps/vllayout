@@ -17,7 +17,7 @@ ui-row {
 	@for $size from 1 to 12 {
 		ui-col-#{$size},
 		ui-col[ui-col-size="#{$size}"] {
-			flex-grow: 1;
+			width: calc(100% / 12 * #{$size});
 		}
 	}
 }
