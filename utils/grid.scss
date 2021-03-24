@@ -1,0 +1,23 @@
+ui-row {
+	display: flex;
+
+	&[ui-row-horizontal] {
+		flex-direction: row;
+	}
+
+	&[ui-row-vertical] {
+		flex-direction: column;
+	}
+
+	ui-col-auto,
+	ui-col[ui-col-size="auto"] {
+		flex-grow: 1;
+	}
+
+	@for $size from 1 to 12 {
+		ui-col-#{$size},
+		ui-col[ui-col-size="#{$size}"] {
+			flex-grow: 1;
+		}
+	}
+}
