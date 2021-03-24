@@ -17,8 +17,12 @@ ui-root {
 	display: block;
 }
 
-ui-block, [ui-block] {
+ui-block, [ui-block], [ui-display="block"] {
 	display: block;
+}
+
+ui-inline, [ui-inline], [ui-display="inline"] {
+	display: inline;
 }
 
 @mixin is-active {
