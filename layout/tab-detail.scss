@@ -1,0 +1,90 @@
+$tab-padding: 1rem !default;
+$tab-header-padding-x: 1rem !default;
+$tab-header-padding-y: 0.75rem !default;
+$tab-border: $border !default;
+$tab-border-width: $border-width !default;
+$tab-background: $page-background !default;
+$tab-inactive-background: $page-dim-background !default;
+$tab-fade-width: 2rem !default;
+
+$tab-header-padding: $tab-header-padding-y $tab-header-padding-x;
+
+[ui-tab-detail] {
+	display: flex;
+	flex-direction: column;
+	height: calc(100% - #{$tab-padding * 2});
+	overflow: hidden;
+	padding: $tab-padding;
+
+	> ui-nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	ui-tabs {
+		display: inline-flex;
+		white-space: nowrap;
+		overflow-y: auto;
+		overflow-x: visible;
+		flex-shrink: 0;
+
+		ui-tab {
+			padding: $tab-header-padding;
+			background: $tab-inactive-background;
+			border: $tab-border;
+			
+			&:not(:last-child) {
+				border-right: none;
+			}
+
+			&:last-child,
+			&:first-child {
+				position: relative;
+				z-index: 10;
+			}
+
+			&[ui-active] {
+				border-bottom-color: $tab-background;
+				background: $tab-background;
+			}
+		}
+	}
+	
+	ui-detail {
+		position: relative;
+		flex-grow: 1;
+		border-left: $tab-border;
+		border-right: $tab-border;
+		border-bottom: $tab-border;
+		background: $tab-background;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 100%;
+			height: calc(#{$line-height + $tab-header-padding-y * 2} - #{$tab-border-width});
+			margin-bottom: $tab-border-width;
+			left: 0;
+			right: 0;
+			background: linear-gradient(90deg, $tab-background, transparent $tab-fade-width, transparent calc(100% - #{$tab-fade-width}), $tab-background);
+			pointer-events: none;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: -$tab-border-width;
+			left: 0;
+			right: 0;
+			z-index: -1;
+			border-top: $tab-border;
+		}
+	}
+}
+
+ui-root[ui-tab-detail] {
+	height: calc(100vh - #{$nav-padding-y * 2 + 1rem * $line-height} - #{$tab-padding * 2});
+	padding-top: #{$nav-padding-y * 2 + 1rem * $line-height + $tab-padding};
+}
