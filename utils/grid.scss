@@ -1,6 +1,19 @@
+$grid-sizes: (
+	"close": 0,
+	"slim": 0.25em,
+	"padded": 0.5em
+) !default;
+
 ui-row {
 	display: flex;
 	flex-wrap: wrap;
+
+	@each $size, $margin in $grid-sizes {
+		&[ui-row-#{$size}],
+		&[ui-row="#{$size"] {
+			padding: 0 #{-$margin};
+		}
+	}
 
 	&[ui-row-horizontal] {
 		flex-direction: row;
@@ -19,6 +32,15 @@ ui-row {
 		ui-col-#{$size},
 		ui-col[ui-col-size="#{$size}"] {
 			width: calc(100% / 12 * #{$size});
+		}
+	}
+
+	@each $size, $margin in $grid-sizes {
+		[ui-row-#{$size}],
+		[ui-row="#{$size"] {
+			@for $size from 1 to 12 {
+				margin: 0 $margin;
+			}
 		}
 	}
 }
