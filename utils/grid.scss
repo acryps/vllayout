@@ -1,7 +1,9 @@
-$grid-sizes: (
-	"close": 0,
-	"slim": 0.25em,
-	"padded": 0.5em
+$grid-padding-sizes: (
+	0: 0,
+	1: 0.25em,
+	2: 0.5em,
+	3: 0.75em,
+	4: 1em
 ) !default;
 
 ui-row {
@@ -9,9 +11,16 @@ ui-row {
 	flex-wrap: wrap;
 
 	@each $size, $margin in $grid-sizes {
-		&[ui-row-#{$size}],
-		&[ui-row="#{$size}"] {
+		&[ui-padding-#{$size}],
+		&[ui-padding="#{$size}"] {
 			margin: 0 #{-$margin};
+
+			@for $size from 1 to 12 {
+				ui-col-#{$size},
+				ui-col[ui-col-size="#{$size}"] {
+					margin: 0 $margin;
+				}
+			}
 		}
 	}
 
@@ -32,18 +41,6 @@ ui-row {
 		ui-col-#{$size},
 		ui-col[ui-col-size="#{$size}"] {
 			width: calc(100% / 12 * #{$size});
-		}
-	}
-
-	@each $size, $margin in $grid-sizes {
-		[ui-row-#{$size}],
-		[ui-row="#{$size}"] {
-			ui-col-#{$size},
-			ui-col[ui-col-size="#{$size}"] {
-				@for $size from 1 to 12 {
-					margin: 0 $margin;
-				}
-			}
 		}
 	}
 }
