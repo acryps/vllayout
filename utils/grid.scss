@@ -11,7 +11,7 @@ ui-row {
 	@each $size, $margin in $grid-sizes {
 		&[ui-row-#{$size}],
 		&[ui-row="#{$size}"] {
-			padding: 0 #{-$margin};
+			margin: 0 #{-$margin};
 		}
 	}
 
@@ -38,8 +38,11 @@ ui-row {
 	@each $size, $margin in $grid-sizes {
 		[ui-row-#{$size}],
 		[ui-row="#{$size}"] {
-			@for $size from 1 to 12 {
-				margin: 0 $margin;
+			ui-col-#{$size},
+			ui-col[ui-col-size="#{$size}"] {
+				@for $size from 1 to 12 {
+					margin: 0 $margin;
+				}
 			}
 		}
 	}
