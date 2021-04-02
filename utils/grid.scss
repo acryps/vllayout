@@ -10,9 +10,9 @@ ui-row {
 	display: flex;
 	flex-wrap: wrap;
 
-	@each $size, $margin in $grid-sizes {
-		&[ui-padding-#{$size}],
-		&[ui-padding="#{$size}"] {
+	@each $size, $margin in $grid-padding-sizes {
+		&[ui-spacing-#{$size}],
+		&[ui-spacing="#{$size}"] {
 			margin: 0 #{-$margin};
 
 			@for $size from 1 to 12 {
@@ -40,6 +40,7 @@ ui-row {
 	@for $size from 1 to 12 {
 		ui-col-#{$size},
 		ui-col[ui-col-size="#{$size}"] {
+			box-sizing: border-box;
 			width: calc(100% / 12 * #{$size});
 		}
 	}
