@@ -22,16 +22,16 @@ ui-row {
 	display: flex;
 	flex-wrap: wrap;
 
-	@include cols(0);
+	@include cols(0em);
 
 	&[ui-spacing] {
 		@include cols($grid-default-spacing);
 	}
 
-	@each $size, $margin in $grid-spacing-sizes {
+	@each $size, $spacing in $grid-spacing-sizes {
 		&[ui-spacing-#{$size}],
 		&[ui-spacing="#{$size}"] {
-			@include cols($size);
+			@include cols($spacing);
 		}
 	}
 
