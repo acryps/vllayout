@@ -6,4 +6,8 @@ ui-content {
 	padding: $content-padding;
 	max-width: $content-width;
 	margin: 0 auto;
+
+	&[ui-fill] {
+		max-width: none;
+	}
 }
