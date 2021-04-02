@@ -12,7 +12,7 @@ $grid-default-spacing: 0.5em;
 	@for $size from 1 to 12 {
 		ui-col-#{$size},
 		ui-col[ui-col-size="#{$size}"] {
-			margin: 0 #{-$spacing};
+			margin: 0 #{$spacing};
 			width: calc(100% / 12 * #{$size} - #{$spacing * 2});
 		}
 	}
@@ -25,12 +25,16 @@ ui-row {
 	@include cols(0em);
 
 	&[ui-spacing] {
+		margin: 0 #{-$grid-default-spacing};
+
 		@include cols($grid-default-spacing);
 	}
 
 	@each $size, $spacing in $grid-spacing-sizes {
 		&[ui-spacing-#{$size}],
 		&[ui-spacing="#{$size}"] {
+			margin: 0 #{-$spacing};
+
 			@include cols($spacing);
 		}
 	}
