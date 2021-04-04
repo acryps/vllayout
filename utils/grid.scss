@@ -16,6 +16,12 @@ $grid-default-spacing: 0.5em;
 			width: calc(100% / 12 * #{$size} - #{$spacing * 2});
 		}
 	}
+
+	ui-col-auto,
+	ui-col[ui-col-size="auto"] {
+		margin: 0 #{$spacing};
+		flex-grow: 1;
+	}
 }
 
 ui-row {
@@ -45,10 +51,5 @@ ui-row {
 
 	&[ui-row-vertical] {
 		flex-direction: column;
-	}
-
-	ui-col-auto,
-	ui-col[ui-col-size="auto"] {
-		flex-grow: 1;
 	}
 }
