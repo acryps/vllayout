@@ -11,6 +11,12 @@ $master-border: $border !default;
 		grid-area: master;
 		border-right: $master-border;
 		overflow-y: auto;
+
+		> ui-button {
+			display: block;
+			margin: $list-padding;
+			text-align: center;
+		}
 	
 		> ui-list {
 			border: none;
