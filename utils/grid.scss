@@ -1,9 +1,11 @@
 $grid-spacing-sizes: (
-	0: 0,
-	1: 0.25em,
-	2: 0.5em,
-	3: 0.75em,
-	4: 1em
+	xxs: 0.0625em,
+	xs: 0.125em,
+	s: 0.25em,
+	m: 0.5em,
+	l: 0.75em,
+	xl: 1em,
+	xxl: 2em
 ) !default;
 
 $grid-default-spacing: 0.5em;
