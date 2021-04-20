@@ -74,6 +74,7 @@ $colors: (
 		--state-border-active: #{map.get($values, 'color-active')};
 	}
 
+	[ui-text-color="#{$name}"],
 	[ui-text-#{$name}] {
 		color: #{map.get($values, 'color')};
 	}
