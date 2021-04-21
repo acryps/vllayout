@@ -1,4 +1,5 @@
 $button-padding: 0.5em 1em !default;
+$button-slim-padding: 0.15em 0.5em !default;
 $button-background: var(--state-background, $page-accent-background) !default;
 $button-color: var(--state-color, $page-accent-color) !default;
 $button-active-background: var(--state-background-active, $page-accent-active-background) !default;
@@ -29,6 +30,10 @@ ui-button {
 	user-select: none;
 
 	transition: 0.2s background, 0.2s color, 0.2s box-shadow;
+
+	&[ui-button-slim] {
+		padding: $button-slim-padding;
+	}
 }
 
 ui-button[ui-button-block] {
