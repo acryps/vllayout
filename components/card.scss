@@ -20,4 +20,8 @@ ui-card {
 		display: block;
 		font-size: $card-tagline-size;
 	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
 }
