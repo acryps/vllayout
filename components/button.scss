@@ -9,11 +9,16 @@ $button-border: $border-width solid var(--state-border, $page-accent-background)
 
 ui-buttons {
 	display: block;
-	margin-bottom: 1em;
-}
+	margin-top: -0.5em;
 
-ui-buttons ui-button {
-	margin-right: 1em;
+	ui-button {
+		margin-top: 0.5em;
+		margin-right: 0.5em;
+	}
+
+	&:empty {
+		display: none;
+	}
 }
 
 ui-buttons ui-button:last-child {
