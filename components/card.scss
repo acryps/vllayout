@@ -1,0 +1,21 @@
+$card-padding: 1.5rem !default;
+$card-border: $border !default;
+$card-title-margin: 0.15em !default;
+$card-tagline-size: 0.8em !default;
+
+ui-card {
+	display: block;
+	padding: $card-padding;
+	border: $card-border;
+
+	ui-card-title {
+		display: block;
+		margin-bottom: $card-title-margin;
+		font-weight: bold;
+	}
+
+	ui-card-tagline {
+		display: block;
+		font-size: $card-tagline-size;
+	}
+}
