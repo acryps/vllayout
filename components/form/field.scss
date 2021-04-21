@@ -58,6 +58,10 @@ ui-field {
 				left: calc(#{$input-border-width} + #{$input-padding-x});
 				padding: 0 0.25em;
 				background: $input-background;
+				white-space: nowrap;
+				overflow: hidden;
+				max-width: calc(100% - #{$input-border-width * 2} - #{$input-padding-x * 2 - 0.5em});
+				text-overflow: ellipsis;
 			}
 		}
 
