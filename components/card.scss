@@ -2,11 +2,13 @@ $card-padding: 1.5rem !default;
 $card-border: $border !default;
 $card-title-margin: 0.15em !default;
 $card-tagline-size: 0.8em !default;
+$card-bottom-margin: 1.5rem !default;
 
 ui-card {
 	display: block;
 	padding: $card-padding;
 	border: $card-border;
+	margin-bottom: $card-bottom-margin;
 
 	ui-card-title {
 		display: block;
