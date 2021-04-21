@@ -22,3 +22,9 @@ body {
 [ui-font-normal] {
 	font-family: $font-sans-serif;
 }
+
+[ui-truncate-line] {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
