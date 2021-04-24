@@ -58,7 +58,7 @@ ui-field {
 				font-size: $input-label-size;
 				top: -$input-label-size;
 				font-size: 1em;
-				left: calc(#{$input-border-width} + #{$input-padding-x});
+				left: calc(#{$input-border-width - 0.25em} + #{$input-padding-x});
 				padding: 0 0.25em;
 				background: $input-background;
 				white-space: nowrap;
