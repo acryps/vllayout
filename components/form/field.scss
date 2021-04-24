@@ -2,7 +2,7 @@ $input-border-width: $border-width !default;
 $input-border: $border !default;
 $input-padding-x: 0.75em !default;
 $input-padding-y: calc(0.5em - #{$input-border-width}) !default;
-$input-padding-horizontal: $input-padding-y !default;
+$input-padding-horizontal: 0.5em !default;
 $input-padding: $input-padding-y $input-padding-x !default;
 $input-label-size: 0.8em !default;
 $input-focus-color: $page-accent-background !default;
