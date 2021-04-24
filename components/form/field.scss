@@ -1,7 +1,7 @@
 $input-border-width: $border-width !default;
 $input-border: $border !default;
 $input-padding-x: 0.75em !default;
-$input-padding-y: 0.5em !default;
+$input-padding-y: calc(0.5em - $input-border-width) !default;
 $input-padding-horizontal: $input-padding-y !default;
 $input-padding: $input-padding-y $input-padding-x !default;
 $input-label-size: 0.8em !default;
@@ -38,9 +38,12 @@ ui-field {
 			padding: $input-padding;
 			font: inherit;
 			border: $input-border;
-			padding-top: $input-padding-y / 2 + $input-label-size / 2;
-			margin-top: $input-label-size / 2;
 			background: $input-background;
+
+			&:not(:only-child) {
+				padding-top: $input-padding-y / 2 + $input-label-size / 2;
+				margin-top: $input-label-size / 2;
+			}
 		
 			&:focus {
 				box-shadow: inset 0 0 0 $input-focus-size $input-focus-color;
