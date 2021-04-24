@@ -11,6 +11,10 @@ $grid-spacing-sizes: (
 $grid-default-spacing: 0.5em;
 
 @mixin cols($spacing) {
+	ui-col {
+		margin: 0 #{$spacing};
+	}
+	
 	@for $size from 1 to 12 {
 		ui-col-#{$size},
 		ui-col[ui-col-size="#{$size}"] {
@@ -21,7 +25,7 @@ $grid-default-spacing: 0.5em;
 
 	ui-col-auto,
 	ui-col[ui-col-size="auto"] {
-		margin: 0 #{$spacing};
+		
 		flex-grow: 1;
 	}
 }
