@@ -25,6 +25,14 @@ ui-inline, [ui-inline], [ui-display="inline"] {
 	display: inline;
 }
 
+[ui-right] {
+	float: right;
+}
+
+[ui-left] {
+	float: left;
+}
+
 @mixin is-active {
 	&[ui-active]:not([ui-active="false"]) {
 		@content
