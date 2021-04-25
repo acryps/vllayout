@@ -8,7 +8,7 @@ $card-bottom-margin: 1.5rem !default;
 ui-card {
 	display: block;
 	padding: $card-padding;
-	border: $card-border-width var(--state-border, #{$card-border-color});
+	border: $card-border-width solid var(--state-border, #{$card-border-color});
 	margin-bottom: $card-bottom-margin;
 
 	ui-card-title {
