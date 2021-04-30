@@ -19,3 +19,11 @@ ui-section {
 	display: block;
 	margin-bottom: 1rem;
 }
+
+ui-no-content {
+	display: block;
+	padding: 1rem;
+	text-align: center;
+	font-style: italic;
+	opacity: 0.5;
+}
