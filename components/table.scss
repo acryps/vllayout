@@ -1,5 +1,6 @@
 $table-padding: 0.25rem !default;
 $table-border: $border !default;
+$table-header-color: $border-color !default;
 
 ui-table {
 	display: table;
@@ -17,6 +18,10 @@ ui-table {
 			padding: $table-padding;
 			border: $table-border;
 		}
+	}
+
+	ui-header-row {
+		background: $table-header-color;
 	}
 
 	ui-header-row,
