@@ -11,21 +11,22 @@ ui-card {
 	margin-bottom: $card-bottom-margin;
 
 	ui-card-body {
+		display: block;
 		padding: $card-padding;
-	}
 
-	ui-card-title {
-		display: block;
-		margin-bottom: $card-title-margin;
-		font-weight: bold;
-	}
+		ui-card-title {
+			display: block;
+			margin-bottom: $card-title-margin;
+			font-weight: bold;
+		}
+	
+		ui-card-tagline {
+			display: block;
+			font-size: $card-tagline-size;
+		}
 
-	ui-card-tagline {
-		display: block;
-		font-size: $card-tagline-size;
-	}
-
-	> :last-child {
-		margin-bottom: 0;
+		> :last-child {
+			margin-bottom: 0;
+		}
 	}
 }
