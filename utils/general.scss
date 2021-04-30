@@ -33,15 +33,18 @@ ui-inline, [ui-inline], [ui-display="inline"] {
 	float: left;
 }
 
-[ui-text-left] {
+[ui-text-left],
+[ui-text-align="left"] {
 	text-align: left;
 }
 
-[ui-text-right] {
+[ui-text-right],
+[ui-text-align="right"] {
 	text-align: right;
 }
 
-[ui-text-center] {
+[ui-text-center],
+[ui-text-align="center"] {
 	text-align: center;
 }
 
