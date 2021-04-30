@@ -49,6 +49,11 @@ ui-notifications {
 			display: block;
 			padding: $notification-padding;
 		}
+
+		ui-buttons {
+			margin: $notification-padding;
+			margin-top: 0;
+		}
 	}
 }
 
