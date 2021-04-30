@@ -1,0 +1,26 @@
+$table-padding: 0.25rem !default;
+$table-border: $border !default;
+
+ui-table {
+	display: table;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+
+	ui-row,
+	ui-header-row {
+		display: table-row;
+
+		ui-cell,
+		ui-header-cell {
+			display: table-cell;
+			padding: $table-padding;
+			border: $table-border;
+		}
+	}
+
+	ui-header-row,
+	ui-header-cell {
+		font-weight: bold;
+	}
+}
