@@ -68,6 +68,7 @@ $menu-border: $border !default;
 
 	> ui-detail {
 		grid-area: detail;
+		overflow-y: auto;
 	}
 }
 	
