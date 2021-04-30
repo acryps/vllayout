@@ -29,4 +29,8 @@ ui-card {
 			margin-bottom: 0;
 		}
 	}
+
+	> ui-list {
+		margin: -$card-border-width;
+	}
 }
