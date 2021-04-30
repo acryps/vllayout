@@ -19,28 +19,28 @@ ui-list-item {
 		background: $list-active-background;
 		color: $list-active-color;
 	}
-}
 
-ui-list-item-title {
-	display: block;
-	font-weight: bold;
-}
+	ui-list-item-title {
+		display: block;
+		font-weight: bold;
+	}
 
-ui-list-item-tagline {
-	display: block;
-	font-size: $list-tagline-size;
-}
+	ui-list-item-tagline {
+		display: block;
+		font-size: $list-tagline-size;
 
-ui-list-item-tagline ui-badge {
-	float: right;
-	top: 0.3em;
-}
+		ui-badge {
+			float: right;
+			top: 0.3em;
+		}
+	}
 
-ui-list-item[ui-action]:hover:not([ui-active]) {
-	cursor: pointer;
-	background: $list-hover-background;
-}
+	&[ui-action]:hover:not([ui-active]) {
+		cursor: pointer;
+		background: $list-hover-background;
+	}
 
-ui-list-item:last-child {
-	border-bottom: none;
+	&:last-child {
+		border-bottom: none;
+	}
 }
