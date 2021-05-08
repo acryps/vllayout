@@ -32,5 +32,10 @@ ui-card {
 
 	> ui-list {
 		margin: -$card-border-width;
+
+		ui-list-item {
+			padding-left: $card-padding;
+			padding-right: $card-padding;
+		}
 	}
 }
