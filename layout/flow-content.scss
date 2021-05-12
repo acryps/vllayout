@@ -11,3 +11,8 @@ ui-content {
 		max-width: none;
 	}
 }
+
+ui-detail > ui-content {
+	overflow: auto;
+	height: calc(100% - #{$content-padding * 2});
+}
