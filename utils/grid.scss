@@ -36,6 +36,10 @@ ui-row {
 
 	@include cols(0em);
 
+	&[ui-no-wrap] {
+		flex-wrap: nowrap;
+	}
+
 	&[ui-spacing] {
 		margin: 0 #{-$grid-default-spacing};
 
