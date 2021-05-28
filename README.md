@@ -1,4 +1,6 @@
 # vllayout
+[![npm version](https://badge.fury.io/js/vllayout.svg)](https://badge.fury.io/js/vllayout)
+
 Layout/Design framework based on tag/attribute styling
 
 <a href="https://vlvt.in/dev/vllayout/">
