@@ -1,6 +1,6 @@
-$menu-width: 15em !default;
-$menu-padding-y: 0.35em !default;
-$menu-padding-x: 1em !default;
+$menu-width: 15rem !default;
+$menu-padding-y: 0.35rem !default;
+$menu-padding-x: 1rem !default;
 $menu-hover-background: $page-hover-background !default;
 $menu-active-background: $page-accent-background !default;
 $menu-active-color: $page-accent-color !default;
@@ -39,10 +39,6 @@ $menu-border: $border !default;
 				color: $menu-action-color;
 			}
 
-			+ ui-menu-group {
-				margin-top: 1em;
-			}
-
 			ui-badge {
 				float: right;
 				top: 0;
@@ -53,16 +49,24 @@ $menu-border: $border !default;
 		ui-menu-group {
 			display: block;
 			margin: 0 #{$menu-padding-x};
-			font-weight: bold;
+			font-size: 0.65rem;
+			text-transform: uppercase;
 			margin-bottom: 1em;
 
 			ui-menu-item {
 				margin: 0 -#{$menu-padding-x};
+				text-transform: none;
+				font-size: 1rem;
 
 				&:first-child {
 					margin-top: $menu-padding-y;
 				}
 			}
+		}
+
+		ui-menu-item + ui-menu-group,
+		ui-menu-group + ui-menu-group {
+			margin-top: 2em;
 		}
 	}
 
