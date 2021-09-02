@@ -19,6 +19,10 @@ ui-field {
 	position: relative;
 	margin-bottom: 1em;
 
+	textarea {
+		resize: vertical;
+	}
+
 	input,
 	select,
 	textarea {
@@ -28,7 +32,6 @@ ui-field {
 		appearance: none;
 		outline: none;
 		box-sizing: border-box;
-		resize: vertical;
 
 		margin: 0;
 		padding: 0;
