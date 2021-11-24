@@ -2,7 +2,8 @@ $master-width: 20rem !default;
 $master-border: $border !default;
 $master-item-padding: 0.75em 1em !default;
 
-[ui-master-detail] {
+[ui-master-detail],
+ui-master-detail {
 	display: grid;
 	grid-template-areas: 'master detail';
 	grid-template-columns: $master-width calc(100% - #{$master-width});

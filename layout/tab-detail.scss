@@ -9,7 +9,8 @@ $tab-fade-width: 2rem !default;
 
 $tab-header-padding: $tab-header-padding-y $tab-header-padding-x;
 
-[ui-tab-detail] {
+[ui-tab-detail],
+ui-tab-detail {
 	display: flex;
 	flex-direction: column;
 	height: calc(100% - #{$tab-padding * 2});

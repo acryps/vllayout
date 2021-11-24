@@ -3,7 +3,8 @@ $pannel-padding: 1em !default;
 $pannel-width: 15em !default;
 $pannel-border: $border !default;
 
-[ui-panel-detail] {
+[ui-panel-detail],
+ui-panel-detail {
 	display: flex;
 	height: 100%;
 	overflow: hidden;
