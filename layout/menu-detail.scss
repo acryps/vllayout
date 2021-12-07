@@ -82,13 +82,3 @@ ui-menu-detail {
 		overflow-y: auto;
 	}
 }
-	
-ui-root[ui-menu-detail] {
-	grid-template-areas: 'header header' 'menu detail';
-	grid-template-rows: #{$nav-padding-y * 2 + 1rem * $line-height} calc(100% - #{$nav-padding-y * 2 + 1rem * $line-height});
-	height: 100vh;
-
-	> ui-nav {
-		grid-area: header;
-	}
-}

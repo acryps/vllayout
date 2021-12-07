@@ -30,14 +30,3 @@ ui-master-detail {
 		overflow-y: auto;
 	}
 }
-
-// include navbar if master-detail is applied to root
-ui-root[ui-master-detail] {
-	grid-template-areas: 'header header' 'master detail';
-	grid-template-rows: $nav-height calc(100% - #{$nav-height});
-	height: 100vh;
-
-	> ui-nav {
-		grid-area: header;
-	}
-}

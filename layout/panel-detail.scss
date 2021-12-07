@@ -32,8 +32,3 @@ ui-panel-detail {
 		flex-grow: 1;
 	}
 }
-
-ui-root[ui-panel-detail] {
-	height: calc(100vh - #{$nav-padding-y * 2 + 1rem * $line-height});
-	padding-top: #{$nav-padding-y * 2 + 1rem * $line-height};
-}
