@@ -44,3 +44,10 @@ ui-list-item {
 		border-bottom: none;
 	}
 }
+
+ui-list-loading {
+	display: block;
+	padding: $list-padding;
+
+	opacity: 0.5;
+}
