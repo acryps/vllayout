@@ -62,6 +62,10 @@ ui-nav {
 			padding: $nav-padding;
 			color: $nav-color;
 
+			&[ui-active] {
+				font-weight: bold;
+			}
+
 			> ui-nav-item {
 				display: inline-block;
 				margin: #{-$nav-padding-y} #{-$nav-padding-x};
