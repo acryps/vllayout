@@ -53,3 +53,10 @@ ui-inline, [ui-inline], [ui-display="inline"] {
 		@content
 	}
 };
+
+[ui-disabled] {
+	pointer-events: none;
+	
+	opacity: 0.75;
+	filter: grayscale(1);
+}
