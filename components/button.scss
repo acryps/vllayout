@@ -32,7 +32,9 @@ ui-button {
 	color: $button-color;
 	border: $button-border;
 	cursor: pointer;
+
 	user-select: none;
+	-webkit-user-select: none;
 
 	transition: 0.2s background, 0.2s color, 0.2s box-shadow;
 
