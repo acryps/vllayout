@@ -26,25 +26,19 @@ ui-tab-detail {
 
 	ui-tabs {
 		display: inline-flex;
-		white-space: nowrap;
-		overflow-y: auto;
-		overflow-x: visible;
+		flex-direction: row-reverse;
+		flex-wrap: wrap;
 		flex-shrink: 0;
+		margin-right: $tab-border-width;
+		transform: rotate(180deg);
 
 		ui-tab {
 			padding: $tab-header-padding;
 			background: $tab-inactive-background;
 			border: $tab-border;
-			
-			&:not(:last-child) {
-				border-right: none;
-			}
-
-			&:last-child,
-			&:first-child {
-				position: relative;
-				z-index: 10;
-			}
+			transform: rotate(180deg);
+			margin-bottom: -$tab-border-width;
+    		margin-left: -$tab-border-width;
 
 			&[ui-active] {
 				border-bottom-color: $tab-background;
@@ -69,7 +63,6 @@ ui-tab-detail {
 			margin-bottom: $tab-border-width;
 			left: 0;
 			right: 0;
-			background: linear-gradient(90deg, $tab-background, #{$tab-background}0 $tab-fade-width, #{$tab-background}0 calc(100% - #{$tab-fade-width}), $tab-background);
 			pointer-events: none;
 		}
 
